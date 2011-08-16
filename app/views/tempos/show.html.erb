@@ -12,7 +12,7 @@
 
 <p>
   <b>Quanto falta?</b>
-
+  <%= quanto_falta(Time.now, Time.(@tempo.data_evento)) %>
 </p>
 
 <%= link_to 'Edit', edit_tempo_path(@tempo) %> |
