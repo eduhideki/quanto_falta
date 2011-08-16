@@ -1,0 +1,25 @@
+<%= form_for(@tempo) do |f| %>
+  <% if @tempo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tempo.errors.count, "error") %> prohibited this tempo from being saved:</h2>
+
+      <ul>
+      <% @tempo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :evento %><br />
+    <%= f.text_field :evento %>
+  </div>
+  <div class="field">
+    <%= f.label :data_evento %><br />
+    <%= f.date_select :data_evento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

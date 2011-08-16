@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Evento:</b>
+  <%= @tempo.evento %>
+</p>
+
+<p>
+  <b>Data evento:</b>
+  <%= @tempo.data_evento %>
+</p>
+
+<p>
+  <b>Quanto falta?</b>
+
+</p>
+
+<%= link_to 'Edit', edit_tempo_path(@tempo) %> |
+<%= link_to 'Back', tempos_path %>
